@@ -21,12 +21,13 @@ public class Mushroom {
         SimpleKMeans kmean = new SimpleKMeans();
         kmean.buildClusterer(datatrain);
 
-        // evaluate the clusterer model
+        // evaluate the cluster model
         ClusterEvaluation eval = new ClusterEvaluation();
         eval.setClusterer(kmean);
+        // using data set to evaluate the model
         eval.evaluateClusterer(datatest);
 
-        System.out.println(kmean);
+//        System.out.println(kmean);
         System.out.println(eval.clusterResultsToString());
     }
 
